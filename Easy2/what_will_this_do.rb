@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Class Something with both an instance method and a class method.
 class Something
   def initialize
     @data = 'Hello'

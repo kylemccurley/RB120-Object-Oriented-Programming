@@ -1,9 +1,13 @@
+# frozen_string_literal: true
+
+# Module for Walkable to add walking functionality.
 module Walkable
   def walk
-     puts "#{name} #{gait} forward." 
+    puts "#{name} #{gait} forward."
   end
 end
 
+# Template for all object of Person
 class Person
   attr_reader :name
   include Walkable
@@ -15,10 +19,11 @@ class Person
   private
 
   def gait
-    "strolls"
+    'strolls'
   end
 end
 
+# Class to hold the states/behaviors of Cat objects.
 class Cat
   attr_reader :name
   include Walkable
@@ -30,10 +35,11 @@ class Cat
   private
 
   def gait
-    "saunters"
+    'saunters'
   end
 end
 
+# Class to hold the states/behaviors of Cheetah objects.
 class Cheetah
   attr_reader :name
   include Walkable
@@ -45,20 +51,17 @@ class Cheetah
   private
 
   def gait
-    "runs"
+    'runs'
   end
 end
 
-# Modify Code So This Works:
+# Code Modified to make the below code work.
 
-mike = Person.new("Mike")
-mike.walk
-# => "Mike strolls forward"
+mike = Person.new('Mike')
+mike.walk # Mike strolls forward
 
-kitty = Cat.new("Kitty")
-kitty.walk
-# => "Kitty saunters forward"
+kitty = Cat.new('Kitty')
+kitty.walk # Kitty saunters forward
 
-flash = Cheetah.new("Flash")
-flash.walk
-# => "Flash runs forward"
+flash = Cheetah.new('Flash')
+flash.walk # => Flash runs forward

@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
+# Module to mix in the walk method. For any class that needs walking
+# functionality.
 module Walkable
   def walk
     "#{title} #{name} #{gait} forward."
   end
 end
 
+# Template for Person object to store name and gait.
 class Person
   attr_reader :name
   include Walkable
@@ -15,10 +20,11 @@ class Person
   private
 
   def gait
-    "strolls"
+    'strolls'
   end
 end
 
+# Template for Cat object to store name state.
 class Cat
   attr_reader :name
   include Walkable
@@ -30,10 +36,11 @@ class Cat
   private
 
   def gait
-    "saunters"
+    'saunters'
   end
 end
 
+# Template for Cheetah object to store name and gait.
 class Cheetah
   attr_reader :name
   include Walkable
@@ -45,27 +52,28 @@ class Cheetah
   private
 
   def gait
-    "runs"
+    'runs'
   end
 end
 
+# Template for Noble object to store name, title, and gait.
 class Noble
   attr_reader :name, :title
   include Walkable
-  
+
   def initialize(name, title)
     @name = name
     @title = title
   end
-  
+
   private
-  
+
   def gait
     'struts'
   end
 end
 
-byron = Noble.new("Byron", "Lord")
+byron = Noble.new('Byron', 'Lord')
 
 p byron.walk
 p byron.name
