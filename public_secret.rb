@@ -5,8 +5,6 @@ Use a setter method to add a value to @secret, then use a getter method to print
 
 class Person
   attr_accessor :secret
-
-  def initialize; @secret = ''; end
 end
 
 person1 = Person.new
