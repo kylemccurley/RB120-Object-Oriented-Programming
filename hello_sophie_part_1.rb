@@ -5,8 +5,8 @@ Use an instance variable to print a greeting with the provided name. (You can re
 
 class Cat
   def initialize(name)
-    puts "I'm a cat!"
     @name = name
+    puts "Hello, I am #{@name}"
   end
 end
 
