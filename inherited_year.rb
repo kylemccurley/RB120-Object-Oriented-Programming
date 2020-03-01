@@ -19,3 +19,6 @@ puts truck1.year
 
 car1 = Car.new(2006)
 puts car1.year
+
+
+# Classes with similar behaviors/states can/should inherit them from a superclass to reduce complexity.
